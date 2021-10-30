@@ -36,7 +36,7 @@ spec:
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
             configMapKeyRef:
-              name: springapp-configmap
+              name: springappconfigmap
               key: password       
 ---
 # Node Port Service For SpringApp
@@ -73,12 +73,12 @@ spec:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
             configMapKeyRef:
-              name: springapp-configmap
+              name: springappconfigmap
               key: username 
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
             configMapKeyRef:
-              name: springapp-configmap
+              name: springappconfigmap
               key: password 
         ports:
         - containerPort: 27017
