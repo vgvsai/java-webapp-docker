@@ -12,7 +12,7 @@ kind: ReplicationController
 metadata:
   name: spring-controller
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     app: springboot
   template:
@@ -58,7 +58,7 @@ kind: ReplicationController
 metadata:
   name: mongo-controller
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     app: mongo
   template:
