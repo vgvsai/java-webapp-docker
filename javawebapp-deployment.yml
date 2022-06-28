@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: javawebapp
-        image: vgvdocker2694/java-docker-demo:$BUILD_ID
+        image: aravind2389/html:$BUILD_ID
         ports:
         - name: javawebapp
           containerPort: 8080  
