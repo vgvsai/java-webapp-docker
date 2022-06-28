@@ -14,7 +14,7 @@ spec:
         app: javawebapp
     spec:
       containers:
-      - image: vgvdocker2694/java-docker-demo:$latest
+      - image: vgvdocker2694/java-docker-demo:$BUILD_ID
         name: javawebapp
         ports:
         - name: javawebapp
