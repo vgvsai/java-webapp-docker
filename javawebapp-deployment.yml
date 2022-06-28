@@ -16,17 +16,14 @@ spec:
       - name: javawebapp
         image: vgvdocker2694/java-docker-demo:$BUILD_ID
         ports:
-            - containerPort: 8080
-          env:
-            - name: PORT
-              value: "8080"
+        containerPort: 8080         
 ---
 # Load Balncer
 apiVersion: v1
 kind: Service
 metadata:
-  name: javawebapp
-spec:
+  name: Expose
+  spec:
   type: LoadBalancer
   ports:
     - port: 80
