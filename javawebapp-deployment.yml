@@ -2,11 +2,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
     name: javawebapp
-  name: java-controller
+    labels:
+    name: java-controller
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
