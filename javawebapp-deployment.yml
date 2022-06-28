@@ -2,15 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: javawebapp
-    labels:
-    name: java-controller
+  name: javawebapp
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: javawebapp
   template:
     metadata:
       labels:
-        name: javawebapp
+        app: javawebapp
     spec:
       containers:
       - image: vgvdocker2694/java-docker-demo:latest
