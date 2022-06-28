@@ -13,13 +13,13 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: dockerhandson/java-web-app
+      - image: vgvdocker2694/java-docker-demo:latest
         name: javawebapp
         ports:
         - name: javawebapp
           containerPort: 8080  
 ---
-# Node Port Service
+# Load Balncer
 apiVersion: v1
 kind: Service
 metadata:
@@ -27,7 +27,7 @@ metadata:
     name: javawebapp
   name: javawebapp
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8080
       targetPort: 8080
