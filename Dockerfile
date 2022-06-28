@@ -6,7 +6,7 @@ RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 
-COPY /var/lib/jenkins/workspace/poc-java/target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo-1.0.jar
+COPY /target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo-1.0.jar
 
 WORKDIR $PROJECT_HOME
 
